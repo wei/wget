@@ -12,17 +12,25 @@ Wraps the wget CLI to be used in Github Actions. See also [Github Action for cur
 
 ### Github Actions
 ```
-action "wget" {
-  uses = "wei/wget@master"
-  args = "-O sample.html https://httpbin.org/html"
-}
+on: push
+jobs:
+  wget:
+    runs-on: ubuntu-latest
+    steps:
+    - name: wget
+      uses: wei/wget@master
+      args: -O sample.html https://httpbin.org/html
 ```
 
 ```
-action "wget" {
-  uses = "wei/wget@master"
-  args = "-qO- https://httpbin.org/get"
-}
+on: push
+jobs:
+  wget:
+    runs-on: ubuntu-latest
+    steps:
+    - name: wget
+      uses: wei/wget@master
+      args: -qO- https://httpbin.org/get
 ```
 
 ### Docker
