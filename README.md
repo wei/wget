@@ -19,7 +19,8 @@ jobs:
     steps:
     - name: wget
       uses: wei/wget@master
-      args: -O sample.html https://httpbin.org/html
+      with:
+        args: -O sample.html https://httpbin.org/html
 ```
 
 ```
@@ -30,7 +31,8 @@ jobs:
     steps:
     - name: wget
       uses: wei/wget@master
-      args: -qO- https://httpbin.org/get
+      with:
+        args: -qO- https://httpbin.org/get
 ```
 
 ### Docker
