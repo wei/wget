@@ -1,6 +1,6 @@
-# Github Action for wget
+# GitHub Action for wget
 
-Wraps the wget CLI to be used in Github Actions. See also [Github Action for curl](https://github.com/marketplace/actions/github-action-for-curl).
+Wraps the wget CLI to be used in GitHub Actions. See also [GitHub Action for curl](https://github.com/marketplace/actions/github-action-for-curl).
 
 
 ## Features
@@ -10,7 +10,7 @@ Wraps the wget CLI to be used in Github Actions. See also [Github Action for cur
 
 ## Usage
 
-### Github Actions
+### GitHub Actions
 ```
 on: push
 jobs:
@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: wget
-      uses: wei/wget@master
+      uses: wei/wget@v1
       with:
         args: -O sample.html https://httpbin.org/html
 ```
@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: wget
-      uses: wei/wget@master
+      uses: wei/wget@v1
       with:
         args: -qO- https://httpbin.org/get
 ```
